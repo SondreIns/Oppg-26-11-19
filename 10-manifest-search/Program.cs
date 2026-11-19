@@ -5,6 +5,9 @@ Console.WriteLine(ContainsItem(manifest, "WRENCH"));
 
 static bool ContainsItem(List<string> items, string search)
 {
-    // TODO: Søk med løkke.
+    foreach(string item in items)
+    {
+        if(item.Equals(search)) return true;
+    }
     return false;
 }
