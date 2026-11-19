@@ -1,4 +1,4 @@
-bool accepted = CanContain(10, 6, 4);
+bool accepted = CanContain(10, 0, 10);
 
 if (accepted)
 {
@@ -9,8 +9,4 @@ else
     Console.WriteLine("REJECTED");
 }
 
-static bool CanContain(int capacity, int occupied, int incoming)
-{
-    // TODO
-    return false;
-}
+static bool CanContain(int capacity, int occupied, int incoming) => capacity >= occupied + incoming;
