@@ -8,8 +8,14 @@ List<string> repairs = new List<string>
 };
 
 int jobNumber = 1;
-
+List<string> repairJobs = [];
 foreach (string repair in repairs)
 {
-    // TODO: Hopp over kansellerte jobber og nummerer resten.
+    string[] check = repair.Split(' ');
+    if (check[0].Equals("CANCELLED:")) continue;
+
+    repairJobs.Add($"Job {jobNumber}: {repair}");
+    jobNumber++;
 }
+
+foreach(string job in repairJobs) Console.WriteLine(job);
